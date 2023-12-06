@@ -97,6 +97,7 @@
             android:name=".main.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/BreezyWeatherTheme.Main"
+            android:launchMode="singleTop"
             android:configChanges="uiMode"
             android:exported="true">
             <intent-filter>
@@ -110,6 +111,17 @@
                 <action android:name="org.breezyweather.ACTION_SHOW_DAILY_FORECAST" />
                 <action android:name="org.breezyweather.ACTION_MANAGEMENT" />
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https"/>
+                <data android:host="www.accuweather.com"/>
+                <data android:pathPattern="/.*/.*/.*/.*/current-weather/.*"/>
+                <data android:scheme="https"/>
+                <data android:host="www.accuweather.com"/>
+                <data android:pathPattern="/.*/.*/.*/.*/minute-weather-forecast/.*"/>
             </intent-filter>
         </activity>
 
