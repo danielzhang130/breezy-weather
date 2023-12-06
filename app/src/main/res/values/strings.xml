@@ -23,7 +23,7 @@
     <!-- Daily/hourly forecast columns, must be as short as possible. -->
     <string name="short_yesterday">Yda</string>
     <string name="short_today">Today</string>
-    <string name="short_tomorrow">Tmw</string>
+    <string name="short_tomorrow">Tomorrow</string>
     <string name="short_monday">Mon</string>
     <string name="short_tuesday">Tue</string>
     <string name="short_wednesday">Wed</string>
