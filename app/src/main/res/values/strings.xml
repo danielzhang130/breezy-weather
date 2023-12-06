@@ -23,7 +23,7 @@
     <!-- Daily/hourly forecast columns, must be as short as possible. -->
     <string name="short_yesterday">Yda</string>
     <string name="short_today">Today</string>
-    <string name="short_tomorrow">Tmw</string>
+    <string name="short_tomorrow">Tomorrow</string>
     <string name="of_clock">:00</string>
     <!-- Temperature -->
     <string name="temperature">Temperature</string>
