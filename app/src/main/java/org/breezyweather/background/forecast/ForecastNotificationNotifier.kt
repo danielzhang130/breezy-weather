@@ -33,6 +33,7 @@ import org.breezyweather.common.extensions.notify
 import org.breezyweather.common.extensions.toBitmap
 import org.breezyweather.domain.location.model.isDaylight
 import org.breezyweather.remoteviews.Notifications
+import org.breezyweather.remoteviews.Notifications.GROUP_FORECAST
 import org.breezyweather.remoteviews.presenters.AbstractRemoteViewsPresenter
 import org.breezyweather.settings.SettingsManager
 import org.breezyweather.theme.resource.ResourceHelper
@@ -49,6 +50,7 @@ class ForecastNotificationNotifier(private val context: Context) {
 
     private val completeNotificationBuilder = context.notificationBuilder(Notifications.CHANNEL_FORECAST) {
         setAutoCancel(false)
+        setGroup(GROUP_FORECAST)
     }
 
     fun showProgress(): Notification {

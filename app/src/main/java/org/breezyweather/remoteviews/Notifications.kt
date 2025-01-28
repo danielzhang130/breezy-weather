@@ -54,6 +54,8 @@ object Notifications {
     // We only have one group as we don’t have many channels
     // We name it “Breezy Weather” as LeakCanary also has its own group
     private const val GROUP_BREEZY_WEATHER = "group_breezy_weather"
+    const val GROUP_WIDGET = "group_widget"
+    const val GROUP_FORECAST = "group_forecast"
 
     private const val CHANNEL_ALERT = "alert"
     private const val ID_ALERT_MIN = 1000
@@ -61,17 +63,20 @@ object Notifications {
     private const val ID_ALERT_GROUP = 2000
     private const val ID_PRECIPITATION = 3000
 
-    const val CHANNEL_FORECAST = "forecast"
+    const val CHANNEL_FORECAST_OLD = "forecast"
+    const val CHANNEL_FORECAST = "forecast_group"
     const val ID_TODAY_FORECAST = 2
     const val ID_TOMORROW_FORECAST = 3
     const val ID_UPDATING_TODAY_FORECAST = 7
     const val ID_UPDATING_TOMORROW_FORECAST = 8
 
-    const val CHANNEL_WIDGET = "widget"
+    const val CHANNEL_WIDGET_OLD = "widget"
+    const val CHANNEL_WIDGET = "widget_group"
     const val ID_WIDGET = 1
     const val ID_UPDATING_WIDGET = 6
 
-    const val CHANNEL_BACKGROUND = "background"
+    const val CHANNEL_BACKGROUND_OLD = "background"
+    const val CHANNEL_BACKGROUND = "background_group"
     const val ID_RUNNING_IN_BACKGROUND = 5
     const val ID_UPDATING_AWAKE = 9
     const val ID_WEATHER_PROGRESS = -101
@@ -91,7 +96,10 @@ object Notifications {
     //private const val KEY_PRECIPITATION_DATE = "PRECIPITATION_DATE"
 
     private val deprecatedChannels = listOf(
-        "normally"
+        "normally",
+        CHANNEL_FORECAST_OLD,
+        CHANNEL_BACKGROUND_OLD,
+        CHANNEL_WIDGET_OLD
     )
 
     /**
@@ -107,7 +115,13 @@ object Notifications {
             listOf(
                 buildNotificationChannelGroup(GROUP_BREEZY_WEATHER) {
                     setName(context.getString(R.string.breezy_weather))
-                }
+                },
+                buildNotificationChannelGroup(GROUP_WIDGET) {
+                    setName("widget")
+                },
+                buildNotificationChannelGroup(GROUP_FORECAST) {
+                    setName("forecast")
+                },
             ),
         )
 
@@ -119,16 +133,15 @@ object Notifications {
                 },
                 buildNotificationChannel(CHANNEL_FORECAST, IMPORTANCE_DEFAULT) {
                     setName(context.getString(R.string.notification_channel_forecast))
-                    setGroup(GROUP_BREEZY_WEATHER)
+                    setGroup(GROUP_FORECAST)
                 },
                 buildNotificationChannel(CHANNEL_WIDGET, IMPORTANCE_DEFAULT) {
                     setName(context.getString(R.string.notification_channel_widget))
-                    setGroup(GROUP_BREEZY_WEATHER)
+                    setGroup(GROUP_WIDGET)
                     setShowBadge(false)
                 },
                 buildNotificationChannel(CHANNEL_BACKGROUND, IMPORTANCE_MIN) {
                     setName(context.getString(R.string.notification_channel_background_services))
-                    setGroup(GROUP_BREEZY_WEATHER)
                     setShowBadge(false)
                 },
                 buildNotificationChannel(CHANNEL_CRASH_LOGS, IMPORTANCE_HIGH) {
