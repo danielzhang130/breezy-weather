@@ -36,11 +36,9 @@
 
             <TextView
                 android:id="@+id/notification_big_temp_1"
-                android:textSize="@dimen/content_text_size"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:paddingBottom="@dimen/little_margin"
-                style="@style/notification_content_text"
+                style="@style/notification_content_temperature"
                 tools:text="9°/3°" />
 
             <ImageView
@@ -72,11 +70,9 @@
 
             <TextView
                 android:id="@+id/notification_big_temp_2"
-                android:textSize="@dimen/content_text_size"
+                style="@style/notification_content_temperature"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:paddingBottom="@dimen/little_margin"
-                style="@style/notification_content_text"
                 tools:text="9°/3°" />
 
             <ImageView
@@ -108,12 +104,10 @@
 
             <TextView
                 android:id="@+id/notification_big_temp_3"
-                android:textSize="@dimen/content_text_size"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:paddingBottom="@dimen/little_margin"
-                style="@style/notification_content_text"
-                tools:text="9°/3°" />
+                style="@style/notification_content_temperature"
+                tools:text="2°/0°" />
 
             <ImageView
                 android:id="@+id/notification_big_icon_3"
@@ -144,11 +138,9 @@
 
             <TextView
                 android:id="@+id/notification_big_temp_4"
-                android:textSize="@dimen/content_text_size"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:paddingBottom="@dimen/little_margin"
-                style="@style/notification_content_text"
+                style="@style/notification_content_temperature"
                 tools:text="9°/3°" />
 
             <ImageView
@@ -180,11 +172,9 @@
 
             <TextView
                 android:id="@+id/notification_big_temp_5"
-                android:textSize="@dimen/content_text_size"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:paddingBottom="@dimen/little_margin"
-                style="@style/notification_content_text"
+                style="@style/notification_content_temperature"
                 tools:text="9°/3°" />
 
             <ImageView

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="notification_content_temperature" parent="@style/notification_content_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:gravity">center_horizontal|top</item>
+        <item name="android:textSize">@dimen/content_text_size</item>
+        <item name="android:autoSizeMaxTextSize">@dimen/content_text_size</item>
+        <item name="android:autoSizeTextType">uniform</item>
+    </style>
+</resources>

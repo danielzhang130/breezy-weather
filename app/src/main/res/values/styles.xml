@@ -180,6 +180,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/content_text_size</item>
     </style>
+    <style name="notification_content_temperature" parent="@style/notification_content_text"/>
 
     <style name="notification_subtitle_text" parent="@style/TextAppearance.Compat.Notification.Info">
         <item name="android:layout_width">wrap_content</item>
